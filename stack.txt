@@ -1,0 +1,13 @@
+STACK Data Structure
+
+
+A stack is a LINEAR data structure that incorporates FILO.
+
+FILO - First in Last Out
+
+
+push - adds an item to the end of the stack
+
+pop - removes an item from the end of the stack
+
+O(1) insert and remove
