@@ -1,0 +1,10 @@
+QUEUE - Data Structure
+
+A queue is a linear structure. It is FIFO.
+
+FIFO - first in first out
+
+enqueue - adds an item to the queue (back of line)
+dequeue - removes an item from the front of the queue
+
+O(1) - insert and remove

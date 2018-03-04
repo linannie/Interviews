@@ -1,0 +1,25 @@
+ALL ABOUT LINKED LISTS
+
+
+Linked List is a linear data structure.
+The elements aren't stored at a contiguous location, they're linked with pointers.
+
+head --> [data | next] --> [d | n] --> [d | n] --> NULL
+
+
+  Linked List has a pointer to the first node of the list called HEAD. Each node contains data
+  and a pointer to the next node.
+
+
+      LINKED LIST ADVANTAGES
+        - dynamic size
+        - ease of insertion/deleion
+     
+      DISADVANTAGES
+        - random access NOT allowed (only sequential)
+        - more space taken for the pointer
+
+
+TIME COMPLEXITIES
+
+
