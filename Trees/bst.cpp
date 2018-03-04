@@ -74,6 +74,16 @@ void postorder(Node* node){
 }
 
 ///////////// SEARCHES ////////////
+void DFS(Node *root, int value){
+
+
+}
+
+void BFS(Node *root, int value){
+
+
+}
+
 
 int main(){
   Node* root = root->newNode(50);                           
