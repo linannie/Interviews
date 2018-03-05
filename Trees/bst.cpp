@@ -41,7 +41,7 @@ Node* Node::insert(Node* root, int data){
   if (data < root->data){                   // if the data is less than root data, go left
     root->left = insert(root->left, data); 
   }
-  if (data > root->data){
+  else{//if (data > root->data){
     root->right = insert(root->right, data);  // if the data is more than root data, go right
   }
 
