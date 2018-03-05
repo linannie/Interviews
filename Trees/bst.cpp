@@ -34,7 +34,7 @@ Node* Node::newNode(int data){
 }
 
 Node* Node::insert(Node* root, int data){
-  if(root == NULL){                           // if there's no root
+  if(!root){                           // if there's no root
     return newNode(data);               // create a new node!
   }
   if (data < root->data){                   // if the data is less than root data, go left
@@ -58,7 +58,7 @@ void preorder(Node* node){
 }
 
 void inorder(Node* node){                   // Left, data, Right
-  if(node != NULL){
+  if(node){
     inorder(node->left);
     cout << node->data << " ";
     inorder(node->right);
@@ -66,7 +66,7 @@ void inorder(Node* node){                   // Left, data, Right
 }
 
 void postorder(Node* node){
-  if(node != NULL){
+  if(node){
     postorder(node->left);
     postorder(node->right);
     cout << node->data << " ";
@@ -84,6 +84,18 @@ void BFS(Node *root, int value){
 
 }
 
+int height(Node* root){                 // returns the # of longest edges
+  int left = 0, right = 0;
+  
+  if(root->left)                        // if left child exists
+    left = 1 + height(root->left);      // traverse down the left side
+  if(root->right)
+    right = 1 + height(root->right);
+  if(left > right)
+    return left;
+  return right;
+
+}
 
 int main(){
   Node* root = root->newNode(50);                           
@@ -106,5 +118,9 @@ int main(){
   cout << "POSTORDER: ";
   postorder(root);
   cout << endl;
+
+  int ht = 0;
+  ht =  height(root);
+  cout << "Height of tree is: " << ht << endl;
   return 0;
 }
