@@ -1,4 +1,5 @@
 #include <iostream>
+#include <queue>
 
 using namespace std;
 
@@ -73,6 +74,22 @@ void postorder(Node* node){
   }
 }
 
+void levelorder(Node* root){
+  queue<Node *> q;
+  
+  if(root)
+    q.push(root);
+  while(!q.empty()){
+    Node* temp = q.front();
+    cout << temp->data << " ";
+    q.pop();
+    if(temp->left)
+      q.push(temp->left);
+    if(temp->right)
+      q.push(temp->right);
+  }  
+
+}
 ///////////// SEARCHES ////////////
 void DFS(Node *root, int value){
 
@@ -117,6 +134,10 @@ int main(){
  
   cout << "POSTORDER: ";
   postorder(root);
+  cout << endl;
+  
+  cout << "LEVELORDER: ";
+  levelorder(root);
   cout << endl;
 
   int ht = 0;
